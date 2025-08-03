@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0396e5d4;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            background-color: #604678;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="reset"] {
+            background-color: #f44336;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Hospital Admission Form</h2>
+
+<form action="#" method="post">
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="0" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="">--Select--</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        
+    </select>
+
+    <label for="contact">Contact Number:</label>
+    <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" placeholder="Enter 10-digit number" required>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+
+    <label for="medical">Past Medical History:</label>
+    <textarea id="medical" name="medical" rows="3"></textarea>
+
+    <label for="reason">Reason for Admission:</label>
+    <textarea id="reason" name="reason" rows="3" required></textarea>
+
+    <label for="dateofadmission">Date of Admission:</label>
+    <input type="date" id="dateofadmission" name="dateofadmission" required>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+
+</body>
+</html>
